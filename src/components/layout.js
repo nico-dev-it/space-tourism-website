@@ -7,9 +7,11 @@ const Nav = styled.div`
     justify-content: end;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
-    gap: 10px;
+    gap: 5%;
     align-items: center;
-    font-family: 'Barlow Condensed', sans-serif;: 
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 55%;
+    justify-content: center;
 `
 
 const Logo = styled.svg`
@@ -33,7 +35,7 @@ const LinkStyle = {
     alignItems:"center",
     fontSize: "16px",
     lineHeight: "19px",
-    letterSpacing: "2.7px"
+    letterSpacing: "2.7px",
 }
 
 const Number = styled.p `
@@ -63,7 +65,7 @@ const Layout = () => {
             </Nav>
             </NavBar>
             <Outlet/>
-            <img src={background} alt="background" style={{ width: "100%", height: "100%", overflow: "hidden" }}></img>
+            <img src={background} alt="background" style={{ width: "100%", height:"100vh", overflow: "hidden" }}></img>
         </>
     )
 }
