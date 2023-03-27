@@ -1,6 +1,7 @@
 const Destination = () => {
     return (
-        <h1>DESTINATION</h1>
+        <>
+        </>
     )
 }
 
