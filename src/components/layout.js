@@ -1,6 +1,7 @@
 import {Link, Outlet} from 'react-router-dom'
 import styled from "styled-components";
 import background from "../assets/home/background-home-desktop.jpg"
+import {motion} from "framer-motion";
 
 const Nav = styled.div`
     display: flex;
@@ -44,9 +45,44 @@ const Number = styled.p `
     margin-right: 10px;
 `
 
+const VariantBackground = {
+    initial: {
+        width: '100vw',
+        height: '100vh',
+        opacity: '0.5'
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            delay: 0,
+            duration: 1,
+            type: 'tween',
+        },
+    },
+}
+
+const VariantNavBar = {
+    initial: {
+        x: '-500px'
+    },
+    animate: {
+        x: 0,
+        transition: {
+            delay: 1,
+            duration: 1.5,
+            type: 'spring',
+        },
+    },
+}
+
 const Layout = () => {
     return (
         <>
+            <motion.div
+                variants={VariantNavBar}
+                initial="initial"
+                animate="animate"
+            >
             <NavBar>
             <Logo>
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
@@ -64,8 +100,13 @@ const Layout = () => {
                 <Link to="/technology" style={LinkStyle}><Number>03</Number>TECHNOLOGY</Link>
             </Nav>
             </NavBar>
+            </motion.div>
             <Outlet/>
-            <img src={background} alt="background" style={{ width: "100%", height:"100vh", overflow: "hidden" }}></img>
+            <motion.div
+                variants={VariantBackground}
+                initial="initial"
+                animate="animate"
+            ><img src={background} alt="background" style={VariantBackground}></img></motion.div>
         </>
     )
 }

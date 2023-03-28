@@ -76,10 +76,28 @@ const Oval = {
     justifyContent: "center"
 }
 
+const VariantContent = {
+    initial: {
+        opacity: '0'
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            delay: 1,
+            duration: 2,
+            type: 'spring',
+        },
+    },
+}
 
 const Home = () => {
     return (
         <>
+            <motion.div
+                variants={VariantContent}
+                initial="initial"
+                animate="animate"
+            >
             <MainTextBox>
                 <Intro>So, you want to travel to</Intro>
                 <MainTitle>SPACE</MainTitle>
@@ -91,6 +109,7 @@ const Home = () => {
                         whileTap={{scale: 0.9}}
                         transition={{type: "spring", stiffness: 400, damping: 17}}
                         style={Oval}><Link to="/destination" style={LinkToDestination}>Explore</Link></motion.div>
+            </motion.div>
         </>
     )
 }
