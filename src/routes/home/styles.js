@@ -1,8 +1,6 @@
-import {Link} from "react-router-dom";
 import styled from "styled-components";
-import {motion} from "framer-motion";
 
-const Intro = styled.div`
+export const Intro = styled.div`
     position: absolute;
     height: 34px;
     left: 0.11%;
@@ -18,7 +16,8 @@ const Intro = styled.div`
     color: #D0D6F9;
     width: 400px;
 `
-const MainTextBox = styled.div`
+
+export const MainTextBox = styled.div`
     position: absolute;
     width: 450px;
     height: 382px;
@@ -26,7 +25,7 @@ const MainTextBox = styled.div`
     top: 250px;
 `
 
-const MainTitle = styled.h1`
+export const MainTitle = styled.h1`
     position: absolute;
     height: 172px;
     left: -3%;
@@ -39,7 +38,7 @@ const MainTitle = styled.h1`
     color: #FFFFFF;
 `
 
-const Content = styled.p`
+export const Content = styled.p`
     position: absolute;
     height: 128px;
     left: 0.11%;
@@ -53,7 +52,7 @@ const Content = styled.p`
     color: #D0D6F9;
 `
 
-const LinkToDestination = {
+export const LinkToDestination = {
     textDecoration: "none",
     fontFamily: "Bellefair",
     fontWeight: "400",
@@ -63,7 +62,7 @@ const LinkToDestination = {
     color: "#0B0D17",
 }
 
-const Oval = {
+export const Oval = {
     position: "absolute",
     background: "#FFFFFF",
     borderRadius: "100%",
@@ -76,7 +75,7 @@ const Oval = {
     justifyContent: "center"
 }
 
-const VariantContent = {
+export const VariantContent = {
     initial: {
         opacity: '0'
     },
@@ -89,29 +88,3 @@ const VariantContent = {
         },
     },
 }
-
-const Home = () => {
-    return (
-        <>
-            <motion.div
-                variants={VariantContent}
-                initial="initial"
-                animate="animate"
-            >
-            <MainTextBox>
-                <Intro>So, you want to travel to</Intro>
-                <MainTitle>SPACE</MainTitle>
-                <Content>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and
-                    not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of
-                    this world experience!</Content>
-            </MainTextBox>
-            <motion.div whileHover={{scale: 1.2}}
-                        whileTap={{scale: 0.9}}
-                        transition={{type: "spring", stiffness: 400, damping: 17}}
-                        style={Oval}><Link to="/destination" style={LinkToDestination}>Explore</Link></motion.div>
-            </motion.div>
-        </>
-    )
-}
-
-export default Home
