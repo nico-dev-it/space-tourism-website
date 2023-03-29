@@ -1,5 +1,4 @@
 import {Link, Outlet} from 'react-router-dom';
-import background from "../assets/home/background-home-desktop.jpg";
 import {motion} from "framer-motion";
 import {LinkStyle, Logo, Nav, NavBar, Number, VariantBackground, VariantNavBar} from "./styles";
 
