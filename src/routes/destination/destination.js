@@ -7,7 +7,7 @@ import {
     Subtitle,
     VariantBackground,
     Image,
-    DestinationName
+    DestinationName, Content, Divider, ExtraInfoDistance, ExtraInfoTitle, ExtraInfoData, ExtraInfoTravel
 } from "./styles";
 import {motion} from "framer-motion";
 import {useState} from "react";
@@ -40,6 +40,16 @@ const Destination = () => {
                     }}>Titan</NavLink>
                 </NavDestination>
             <DestinationName>{data.name}</DestinationName>
+            <Content>{data.description}</Content>
+                <Divider></Divider>
+                <ExtraInfoDistance>
+                    <p style={ExtraInfoTitle}>AVG. DISTANCE</p>
+                    <p style={ExtraInfoData}>{data.distance}</p>
+                </ExtraInfoDistance>
+                <ExtraInfoTravel>
+                    <p style={ExtraInfoTitle}>EST. TRAVEL TIME</p>
+                    <p style={ExtraInfoData}>{data.travel}</p>
+                </ExtraInfoTravel>
             </RightContainer>
             <motion.div
                 variants={VariantBackground}

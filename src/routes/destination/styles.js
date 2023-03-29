@@ -32,8 +32,8 @@ export const RightContainer = styled.div `
     position: absolute;
     width: 445px;
     height: 472px;
-    right: 5%;
-    top: 300px;
+    right: 10%;
+    top: 35%;
 `
 
 export const NavLink = styled.button `
@@ -100,3 +100,59 @@ export const DestinationName = styled.p `
     color: #FFFFFF;
     margin: 0;
 `
+export const Content = styled.p `
+    position: absolute;
+    height: 128px;
+    left: 4%;
+    right: 0.22%;
+    top: calc(50% - 80px + 20px);
+    font-family: 'Barlow';
+    font-size: 18px;
+    line-height: 32px;
+    color: #D0D6F9;
+`
+
+export const Divider = styled.div`
+    height: 1px;
+    width: 444px;
+    left: 4%;
+    top: 382px;
+    border-radius: 0px;
+    position: absolute;
+    top: 80.93%;
+    bottom: 18.86%;
+    background: #383B4B;
+`
+
+export const ExtraInfoDistance = styled.div `
+    position: absolute;
+    left: 4%;
+    top: 87.08%;
+`
+export const ExtraInfoTravel = styled.div `
+    position: absolute;
+    left: 50%;
+    right: 22.58%;
+    top: 87.08%;
+    bottom: 0%;
+`
+
+export const ExtraInfoTitle = {
+    fontFamily: 'Barlow Condensed',
+    fontWeight: "400",
+    fontSize: "14px",
+    lineHeight: "17px",
+    letterSpacing: "2.3625px",
+    textTransform: "uppercase",
+    color: "#D0D6F9",
+}
+
+export const ExtraInfoData = {
+    fontFamily: 'Bellefair',
+    fontWeight: "400",
+    fontSize: "28px",
+    lineHeight: "32px",
+    textTransform: "uppercase",
+    color: "#ffffff",
+    marginTop: "5px"
+}
