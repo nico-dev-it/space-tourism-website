@@ -57,7 +57,7 @@ export const Subtitle = styled.h1 `
     position: absolute;
     width: 382px;
     height: 34px;
-    left: 166.5px;
+    left: 7%;
     top: 212px;
     font-family: 'Barlow Condensed';
     font-weight: 400;
@@ -70,7 +70,7 @@ export const Subtitle = styled.h1 `
 
 export const MenuNumber = styled.h1 `
     position: absolute;
-    left: 100px;
+    left: 2%;
     right: 93.19%;
     top: 212px;
     font-family: 'Barlow Condensed';
@@ -78,4 +78,25 @@ export const MenuNumber = styled.h1 `
     letter-spacing: 4.725px;
     color: #FFFFFF;
     opacity: 0.25;
+`
+
+export const Image = {
+    position: "absolute",
+    width: "445px",
+    height: "445px",
+    left: "7%",
+    top: "40%"
+}
+
+export const DestinationName = styled.p `
+    position: absolute;
+    left: 4%;
+    top: 10%;
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 115px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
 `

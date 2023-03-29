@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-const getData = (planet) => {
+const GetData = (planet) => {
     const [data, setData] = useState( {
         "name": "Moon",
         "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
@@ -26,7 +26,7 @@ const getData = (planet) => {
                     "travel": "9 months"
                 })
                 break
-            case "Europa":
+            case "europa":
                 setData({
                     "name": "Europa",
                     "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
@@ -34,7 +34,7 @@ const getData = (planet) => {
                     "travel": "3 years"
                 })
                 break
-            case "Titan":
+            case "titan":
                 setData({
                     "name": "Titan",
                     "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
@@ -49,4 +49,4 @@ const getData = (planet) => {
     return {data}
 }
 
-export default getData
+export default GetData
