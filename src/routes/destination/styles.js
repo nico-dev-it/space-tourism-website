@@ -135,6 +135,7 @@ export const ExtraInfoTravel = styled.div `
     right: 22.58%;
     top: 87.08%;
     bottom: 0%;
+    width: 150px;
 `
 
 export const ExtraInfoTitle = {
@@ -156,3 +157,34 @@ export const ExtraInfoData = {
     color: "#ffffff",
     marginTop: "5px"
 }
+
+export const VariantImage = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            delay: 2,
+            duration: 3,
+            type: 'spring',
+        },
+    },
+}
+
+export const VariantContent = {
+    initial: {
+        y: 300,
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        y:400,
+        transition: {
+            delay: 2,
+            duration: 3,
+            type: 'spring',
+        },
+    },
+}
+
