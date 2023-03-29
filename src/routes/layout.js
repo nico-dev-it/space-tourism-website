@@ -30,11 +30,6 @@ const Layout = () => {
                 </NavBar>
             </motion.div>
             <Outlet/>
-            <motion.div
-                variants={VariantBackground}
-                initial="initial"
-                animate="animate"
-            ><img src={background} alt="background" style={VariantBackground}></img></motion.div>
         </>
     )
 }

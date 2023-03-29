@@ -43,22 +43,6 @@ export const LinkStyle = {
     letterSpacing: "2.7px",
 }
 
-export const VariantBackground = {
-    initial: {
-        width: '100vw',
-        height: '100vh',
-        opacity: '0.5'
-    },
-    animate: {
-        opacity: 1,
-        transition: {
-            delay: 0,
-            duration: 1,
-            type: 'tween',
-        },
-    },
-}
-
 export const VariantNavBar = {
     initial: {
         x: '-500px'
