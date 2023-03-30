@@ -1,4 +1,5 @@
 import backgroundDestination from "../../assets/destination/background-destination-desktop.jpg"
+import backgroundMobile from "../../assets/destination/background-destination-tablet.jpg"
 import {
     Content,
     DestinationName,
@@ -13,11 +14,13 @@ import {
     NavLink,
     RightContainer,
     Subtitle,
-    VariantBackground, VariantContent,
+    Screen,
+    VariantBackground,
+    VariantContent,
     VariantImage
 } from "./styles";
 import {motion} from "framer-motion";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import GetData from "./getData";
 import {VariantNavBar} from "../styles";
 
@@ -25,8 +28,29 @@ import {VariantNavBar} from "../styles";
 const Destination = () => {
     const [content, setContent] = useState('moon')
     const {data} = GetData(content)
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const imageUrl = windowWidth >= 770 ? backgroundDestination : backgroundMobile;
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        }
+    }, []);
+
     return (
-        <>
+        <motion.div
+            variants={VariantBackground}
+            initial="initial"
+            animate="animate"
+        >
+        <Screen style={{backgroundImage: `url(${imageUrl})` }}>
             <>
                 <motion.div variants={VariantNavBar}
                             initial="initial"
@@ -75,12 +99,8 @@ const Destination = () => {
                 </ExtraInfoTravel>
                 </motion.div>
             </RightContainer>
-            <motion.div
-                variants={VariantBackground}
-                initial="initial"
-                animate="animate"
-            ><img src={backgroundDestination} style={VariantBackground} alt="background"/></motion.div>
-        </>
+        </Screen>
+    </motion.div>
     )
 }
 
