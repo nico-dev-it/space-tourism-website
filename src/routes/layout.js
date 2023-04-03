@@ -1,7 +1,6 @@
 import {Link, Outlet} from 'react-router-dom';
-import background from "../assets/home/background-home-desktop.jpg";
 import {motion} from "framer-motion";
-import {LinkStyle, Logo, Nav, NavBar, Number, VariantBackground, VariantNavBar} from "./styles";
+import {DividerNav, LinkStyle, Logo, Nav, NavBar, Number, VariantNavBar} from "./styles";
 
 const Layout = () => {
     return (
@@ -21,6 +20,7 @@ const Layout = () => {
                             </g>
                         </svg>
                     </Logo>
+                    <DividerNav></DividerNav>
                     <Nav>
                         <Link to="/" style={LinkStyle}><Number>00</Number>HOME</Link>
                         <Link to="/destination" style={LinkStyle}><Number>01</Number>DESTINATION</Link>
@@ -30,11 +30,6 @@ const Layout = () => {
                 </NavBar>
             </motion.div>
             <Outlet/>
-            <motion.div
-                variants={VariantBackground}
-                initial="initial"
-                animate="animate"
-            ><img src={background} alt="background" style={VariantBackground}></img></motion.div>
         </>
     )
 }

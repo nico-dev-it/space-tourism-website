@@ -14,7 +14,7 @@ export const Nav = styled.div`
 
 export const Logo = styled.svg`
     position: relative;
-    top: 30px;
+    top: 17%;
 `
 
 export const NavBar = styled.div`
@@ -43,22 +43,6 @@ export const LinkStyle = {
     letterSpacing: "2.7px",
 }
 
-export const VariantBackground = {
-    initial: {
-        width: '100vw',
-        height: '100vh',
-        opacity: '0.5'
-    },
-    animate: {
-        opacity: 1,
-        transition: {
-            delay: 0,
-            duration: 1,
-            type: 'tween',
-        },
-    },
-}
-
 export const VariantNavBar = {
     initial: {
         x: '-500px'
@@ -72,3 +56,15 @@ export const VariantNavBar = {
         },
     },
 }
+
+export const DividerNav = styled.div`
+    height: 1px;
+    width: 444px;
+    left: 18%;
+    top: 40px;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 18.86%;
+    background: #383B4B;
+    z-index:1
+`
