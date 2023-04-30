@@ -34,8 +34,8 @@ const Destination = () => {
 
     useEffect(() => {
         const handleWindowResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
+            setWindowWidth(window.innerWidth)
+        }
 
         window.addEventListener('resize', handleWindowResize);
 
