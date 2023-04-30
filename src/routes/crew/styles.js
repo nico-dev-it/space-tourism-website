@@ -7,11 +7,22 @@ export const Screen = styled.div `
     background-position: top center;
 `
 
-export const NavCrew = styled.div `
+export const NavCrewLink = styled.button `
     color: #ffffff;
+    background: none;
+    border: none;
+    font-size: 30px;
     &: hover { 
        cursor: pointer;
     }
+`
+
+export const NavCrew = styled.div `
+    position: absolute;
+    width: 132px;
+    height: 15px;
+    left: 167px;
+    top: 700px;
 `
 
 export const CrewRole = styled.div `

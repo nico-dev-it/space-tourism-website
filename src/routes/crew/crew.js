@@ -1,7 +1,7 @@
 import backgroundCrew from '../../assets/crew/background-crew-desktop.jpg'
 import backgroundCrewMobile from '../../assets/crew/background-crew-tablet.jpg'
 import {useEffect, useState} from "react";
-import {CrewName, CrewRole, NavCrew, Screen, CrewBio, CrewImage} from "./styles";
+import {CrewName, CrewRole, NavCrew, NavCrewLink, Screen, CrewBio, CrewImage} from "./styles";
 import {VariantNavBar} from "../styles";
 import {MenuNumber, Subtitle} from "../destination/styles";
 import {motion} from "framer-motion";
@@ -34,18 +34,21 @@ const Crew = () => {
                     <MenuNumber>02</MenuNumber>
                     <Subtitle>pick your crew</Subtitle>
                 </motion.div>
-                <NavCrew onClick={() => {
-                    setContent('douglas-hurley')
-                }}>●</NavCrew>
-                <NavCrew onClick={() => {
-                    setContent('mark-shuttleworth')
-                }}>●</NavCrew>
-                <NavCrew onClick={() => {
-                    setContent('victor-glover')
-                }}>●</NavCrew>
-                <NavCrew onClick={() => {
-                    setContent('anousheh-ansari')
-                }}>●</NavCrew>
+                <NavCrew>
+                    <NavCrewLink onClick={() => {
+                        setContent('douglas-hurley')
+                    }}>●</NavCrewLink>
+                    <NavCrewLink onClick={() => {
+                        setContent('mark-shuttleworth')
+                    }}>●</NavCrewLink>
+                    <NavCrewLink onClick={() => {
+                        setContent('victor-glover')
+                    }}>●</NavCrewLink>
+                    <NavCrewLink onClick={() => {
+                        setContent('anousheh-ansari')
+                    }}>●</NavCrewLink>
+                </NavCrew>
+
                 <CrewRole>{data.role}</CrewRole>
                 <CrewName>{data.name}</CrewName>
                 <CrewBio>{data.bio}</CrewBio>
